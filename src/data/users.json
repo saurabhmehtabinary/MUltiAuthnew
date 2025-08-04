@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "email": "superadmin@example.com",
+      "name": "Super Admin",
+      "role": "super_admin",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "user-2",
+      "email": "admin@techcorp.com",
+      "name": "Tech Corp Admin",
+      "role": "org_admin",
+      "organizationId": "org-1",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "user-3",
+      "email": "user@techcorp.com",
+      "name": "Tech Corp User",
+      "role": "org_user",
+      "organizationId": "org-1",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "name": "saurabhmmmm",
+      "email": "adminuwwwwwser1@gmail.com",
+      "role": "org_user",
+      "organizationId": "org-1",
+      "id": "user-1754307106281",
+      "createdAt": "2025-08-04T11:31:46.281Z",
+      "updatedAt": "2025-08-04T11:31:46.281Z"
+    },
+    {
+      "name": "asa",
+      "email": "asa@sasa.com",
+      "role": "org_user",
+      "organizationId": "org-1",
+      "id": "user-1754307582278",
+      "createdAt": "2025-08-04T11:39:42.278Z",
+      "updatedAt": "2025-08-04T11:39:42.278Z"
+    },
+    {
+      "name": "ppppp",
+      "email": "sda@sasa.com",
+      "role": "org_user",
+      "organizationId": "org-1",
+      "id": "user-1754307594934",
+      "createdAt": "2025-08-04T11:39:54.934Z",
+      "updatedAt": "2025-08-04T11:39:54.934Z"
+    }
+  ]
+}

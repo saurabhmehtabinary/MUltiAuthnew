@@ -1,0 +1,25 @@
+{
+  "organizations": [
+    {
+      "id": "org-1",
+      "name": "Tech Corp",
+      "description": "Technology company",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "org-2",
+      "name": "Marketing Inc",
+      "description": "Marketing agency",
+      "createdAt": "2024-01-02T00:00:00Z",
+      "updatedAt": "2024-01-02T00:00:00Z"
+    },
+    {
+      "name": "samii",
+      "description": "sammi",
+      "id": "org-1754307498720",
+      "createdAt": "2025-08-04T11:38:18.720Z",
+      "updatedAt": "2025-08-04T11:38:18.720Z"
+    }
+  ]
+}
