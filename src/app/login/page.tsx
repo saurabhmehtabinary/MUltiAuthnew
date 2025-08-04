@@ -63,7 +63,7 @@ export default function LoginPage() {
     }
 
     try {
-      const result = authManager.login(email, password);
+      const result = authManager.login(email);
       
       if (result.success) {
         showSuccess('Login Successful', `Welcome back, ${result.user?.name}!`);
@@ -72,7 +72,7 @@ export default function LoginPage() {
         setError(result.error || 'Login failed');
         showError('Login Failed', result.error || 'Invalid credentials');
       }
-    } catch (error) {
+    } catch {
       setError('An unexpected error occurred');
       showError('Login Error', 'An unexpected error occurred');
     } finally {

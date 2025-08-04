@@ -145,7 +145,7 @@ export default function DataManagementPage() {
       <div className="mt-6 bg-blue-50 p-6 rounded-lg">
         <h2 className="text-xl font-semibold mb-4">Instructions</h2>
         <div className="space-y-2 text-sm">
-          <p><strong>Test Data Persistence:</strong> Creates test data and verifies it's saved to JSON files.</p>
+          <p><strong>Test Data Persistence:</strong> Creates test data and verifies it&apos;s saved to JSON files.</p>
           <p><strong>Reset to Defaults:</strong> Restores the original default data.</p>
           <p><strong>Refresh Data:</strong> Reloads data from the current state.</p>
           <p><strong>Note:</strong> Check the browser console for detailed logs about data operations.</p>

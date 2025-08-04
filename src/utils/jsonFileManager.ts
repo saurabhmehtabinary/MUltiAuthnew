@@ -1,11 +1,5 @@
 import { User, Organization, Order } from '@/types';
 
-interface JsonData {
-  users: User[];
-  organizations: Organization[];
-  orders: Order[];
-}
-
 class JsonFileManager {
   private static instance: JsonFileManager;
 

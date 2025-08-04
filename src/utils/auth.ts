@@ -51,7 +51,7 @@ class AuthManager {
   }
 
   // Authentication methods
-  login(email: string, password: string): { success: boolean; user?: User; error?: string } {
+  login(email: string): { success: boolean; user?: User; error?: string } {
     // Simple authentication - in real app, this would be API call
     const user = dataManager.getUserByEmail(email);
     

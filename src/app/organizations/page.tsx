@@ -33,12 +33,12 @@ export default function OrganizationsPage() {
     }
     
     try {
-      const org = await dataManager.createOrganization({ name, description });
+      await dataManager.createOrganization({ name, description });
       setOrganizations(dataManager.getOrganizations());
       setName('');
       setDescription('');
       setSuccess('Organization created successfully');
-    } catch (error) {
+    } catch {
       setError('Failed to create organization');
     } finally {
       setIsLoading(false);
@@ -65,13 +65,13 @@ export default function OrganizationsPage() {
     }
     
     try {
-      const updated = await dataManager.updateOrganization(editingOrg.id, { name, description });
+      await dataManager.updateOrganization(editingOrg.id, { name, description });
       setOrganizations(dataManager.getOrganizations());
       setEditingOrg(null);
       setName('');
       setDescription('');
       setSuccess('Organization updated successfully');
-    } catch (error) {
+    } catch {
       setError('Failed to update organization');
     } finally {
       setIsLoading(false);
@@ -89,7 +89,7 @@ export default function OrganizationsPage() {
         } else {
           setError('Failed to delete organization');
         }
-      } catch (error) {
+      } catch {
         setError('Failed to delete organization');
       } finally {
         setIsLoading(false);

@@ -136,7 +136,7 @@ export default function UsersPage() {
     }
     
     try {
-      const user = await dataManager.createUser({ name, email, role: role as User['role'], organizationId: orgId });
+      await dataManager.createUser({ name, email, role: role as User['role'], organizationId: orgId });
       
       // Update users list immediately
       if (currentUser?.role === 'super_admin') {
@@ -151,7 +151,7 @@ export default function UsersPage() {
       setRole('org_user');
       setSuccess('User created successfully');
       showSuccess('User Created', `${name} has been successfully added to the system.`);
-    } catch (error) {
+    } catch {
       setError('Failed to create user');
       showError('Creation Failed', 'Failed to create user. Please try again.');
     } finally {
@@ -186,7 +186,7 @@ export default function UsersPage() {
     }
     
     try {
-      const updated = await dataManager.updateUser(editingUser.id, { name, email, role: role as User['role'], organizationId: orgId });
+      await dataManager.updateUser(editingUser.id, { name, email, role: role as User['role'], organizationId: orgId });
       
       // Update users list immediately
       if (currentUser?.role === 'super_admin') {
@@ -202,7 +202,7 @@ export default function UsersPage() {
       setRole('org_user');
       setSuccess('User updated successfully');
       showSuccess('User Updated', `${name}'s information has been successfully updated.`);
-    } catch (error) {
+    } catch {
       setError('Failed to update user');
       showError('Update Failed', 'Failed to update user. Please try again.');
     } finally {
@@ -228,7 +228,7 @@ export default function UsersPage() {
           setError('Failed to delete user');
           showError('Deletion Failed', 'Failed to delete user. Please try again.');
         }
-      } catch (error) {
+      } catch {
         setError('Failed to delete user');
         showError('Deletion Failed', 'Failed to delete user. Please try again.');
       } finally {
@@ -449,7 +449,7 @@ export default function UsersPage() {
                 <div className="flex flex-wrap gap-2 mt-4">
                   {searchTerm && (
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                      Search: "{searchTerm}"
+                      Search: &quot;{searchTerm}&quot;
                       <button onClick={() => setSearchTerm('')} className="ml-2 text-indigo-600 hover:text-indigo-800">×</button>
                     </span>
                   )}

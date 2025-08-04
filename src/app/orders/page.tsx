@@ -136,7 +136,7 @@ export default function OrdersPage() {
     }
     
     try {
-      const order = await dataManager.createOrder({ title, description, status: status as Order['status'], userId, organizationId: orgId });
+      await dataManager.createOrder({ title, description, status: status as Order['status'], userId, organizationId: orgId });
       
       // Update orders list immediately
       refreshOrders();
@@ -147,7 +147,7 @@ export default function OrdersPage() {
       setStatus('pending');
       setSuccess('Order created successfully');
       showSuccess('Order Created', `${title} has been successfully created.`);
-    } catch (error) {
+    } catch {
       setError('Failed to create order');
       showError('Creation Failed', 'Failed to create order. Please try again.');
     } finally {
@@ -183,7 +183,7 @@ export default function OrdersPage() {
     }
     
     try {
-      const updated = await dataManager.updateOrder(editingOrder.id, { title, description, status: status as Order['status'], userId, organizationId: orgId });
+      await dataManager.updateOrder(editingOrder.id, { title, description, status: status as Order['status'], userId, organizationId: orgId });
       
       // Update orders list immediately
       refreshOrders();
@@ -195,7 +195,7 @@ export default function OrdersPage() {
       setStatus('pending');
       setSuccess('Order updated successfully');
       showSuccess('Order Updated', `${title} has been successfully updated.`);
-    } catch (error) {
+    } catch {
       setError('Failed to update order');
       showError('Update Failed', 'Failed to update order. Please try again.');
     } finally {
@@ -217,7 +217,7 @@ export default function OrdersPage() {
           setError('Failed to delete order');
           showError('Deletion Failed', 'Failed to delete order. Please try again.');
         }
-      } catch (error) {
+      } catch {
         setError('Failed to delete order');
         showError('Deletion Failed', 'Failed to delete order. Please try again.');
       } finally {
@@ -447,7 +447,7 @@ export default function OrdersPage() {
                 <div className="flex flex-wrap gap-2 mt-4">
                   {searchTerm && (
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                      Search: "{searchTerm}"
+                      Search: &quot;{searchTerm}&quot;
                       <button onClick={() => setSearchTerm('')} className="ml-2 text-indigo-600 hover:text-indigo-800">×</button>
                     </span>
                   )}

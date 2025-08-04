@@ -132,7 +132,7 @@ export default function DashboardPage() {
                   Welcome back, {currentUser.name}! 👋
                 </h1>
                 <p className="text-slate-600 mt-1">
-                  Here's what's happening in your {getRoleDisplayName(currentUser.role).toLowerCase()} workspace
+                  Here&apos;s what&apos;s happening in your {getRoleDisplayName(currentUser.role).toLowerCase()} workspace
                 </p>
                 <div className="flex items-center space-x-2 mt-2">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getRoleColor(currentUser.role)} text-white shadow-sm`}>
