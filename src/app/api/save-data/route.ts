@@ -9,7 +9,7 @@ interface SaveDataRequest {
 }
 
 // In-memory storage for production (Vercel)
-let memoryStorage: {
+const memoryStorage: {
   users: User[];
   organizations: Organization[];
   orders: Order[];
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     if (isServerless) {
       // Use in-memory storage for production
-      memoryStorage[type] = data as any;
+      (memoryStorage as Record<string, User[] | Organization[] | Order[]>)[type] = data;
       console.log(`Data saved to memory storage (${type}):`, { count: data.length });
       
       return NextResponse.json({ 
