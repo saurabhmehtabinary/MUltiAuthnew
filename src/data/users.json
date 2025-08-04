@@ -52,6 +52,15 @@
       "id": "user-1754307594934",
       "createdAt": "2025-08-04T11:39:54.934Z",
       "updatedAt": "2025-08-04T11:39:54.934Z"
+    },
+    {
+      "name": "xzsds",
+      "email": "dsd@sdsa.com",
+      "role": "org_user",
+      "organizationId": "org-1",
+      "id": "user-1754315447517",
+      "createdAt": "2025-08-04T13:50:47.517Z",
+      "updatedAt": "2025-08-04T13:50:47.517Z"
     }
   ]
 }
